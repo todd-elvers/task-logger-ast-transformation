@@ -26,12 +26,12 @@ class TaskLoggerASTTransformation implements ASTTransformation{
         if (annotatedNode instanceof MethodNode) {
             MethodNode methodNode = annotatedNode as MethodNode
             if (methodNode.code instanceof BlockStatement) {
-                Statement startPrintlnMessage = createPrintlnStatement("Starting $methodNode.name")
-                Statement endPrintlnMessage = createPrintlnStatement("Ending $methodNode.name")
+                Statement startPrintlnStatement = createPrintlnStatement("Starting $methodNode.name")
+                Statement endPrintlnStatement = createPrintlnStatement("Ending $methodNode.name")
 
                 BlockStatement blockStatement = methodNode.code as BlockStatement
-                blockStatement.statements.add(0, startPrintlnMessage)
-                blockStatement.statements.add(endPrintlnMessage)
+                blockStatement.statements.add(0, startPrintlnStatement)
+                blockStatement.statements.add(endPrintlnStatement)
             }
         } else {
             error(source, annotatedNode, "Found @${TaskLogger.simpleName} in an unsupported location. This annotation only works on methods.")
