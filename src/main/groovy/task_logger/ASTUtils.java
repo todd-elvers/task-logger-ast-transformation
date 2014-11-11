@@ -38,7 +38,13 @@ import java.lang.reflect.Modifier;
 import java.util.*;
 
 /**
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * ~ NOTE: This was stolen from grails-core for ease, and will eventually ~
+ * ~       be trimmed down considerably                                   ~
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ *
  * Helper methods for working with Groovy AST trees.
+ *
  *
  * @author Graeme Rocher
  * @since 0.3
