@@ -29,7 +29,7 @@ class EndToEndTest extends Specification {
         System.setOut(orig)
     }
 
-    void "empty void function adds two println() calls"(){
+    void "an empty method annotated with @TaskLogger will have two println() calls added to it"(){
         when:
             classUnderTest.task1()
 
@@ -37,7 +37,7 @@ class EndToEndTest extends Specification {
             out.toString() == 'Starting task1\r\nEnding task1\r\n'
     }
 
-    void "println() from a method shows up in between the println() calls @TaskLogger adds"(){
+    void "println() from a method annotated with @TaskLogger shows up in between the println() calls @TaskLogger adds"(){
         when:
             classUnderTest.task2()
 
