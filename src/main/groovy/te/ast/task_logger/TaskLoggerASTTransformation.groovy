@@ -19,7 +19,12 @@ import org.codehaus.groovy.syntax.SyntaxException
 import org.codehaus.groovy.transform.ASTTransformation
 import org.codehaus.groovy.transform.GroovyASTTransformation
 
-
+/**
+ * TODO: Improve this class by adding some or all of the following:
+ *  - Configurable log messages for start & end calls
+ *  - Configurable log method signature (i.e. print vs println)
+ *  - Configurable slf4j/log4j integration (i.e. log.warn vs println)
+ */
 @CompileStatic
 @GroovyASTTransformation(phase = CompilePhase.SEMANTIC_ANALYSIS)
 class TaskLoggerASTTransformation implements ASTTransformation {
